@@ -172,7 +172,7 @@ a {
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -347,7 +347,7 @@ a {
 .problem {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.76) 50%, rgba(255, 255, 255, 0.9)),
-    url("./assets/images/problem-bg-generated.png") center / cover;
+    url("./assets/images/interior_gym_day_01.jpg") center / cover;
 }
 
 .section-title {
@@ -508,7 +508,7 @@ a {
   padding: 80px 24px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url("./assets/images/problem-bg-generated.png") center / cover;
+    url("./assets/images/interior_logo_wall_02.jpg") center / cover;
   color: var(--white);
   text-align: center;
 }
@@ -575,10 +575,120 @@ a {
   margin-top: 12px;
 }
 
+.trainers {
+  background: var(--gray-50);
+}
+
+.trainers__grid {
+  display: grid;
+  gap: 28px;
+}
+
+.trainer-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: stretch;
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.trainer-card__image {
+  min-height: 420px;
+  background: var(--gray-100);
+  overflow: hidden;
+}
+
+.trainer-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.trainer-card__body {
+  align-self: center;
+}
+
+.trainer-card__company,
+.trainer-card__role,
+.trainer-card__en {
+  margin: 0;
+}
+
+.trainer-card__company,
+.trainer-card__role {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.trainer-card__company {
+  color: var(--gold);
+}
+
+.trainer-card h3 {
+  margin: 14px 0 4px;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.trainer-card__en {
+  color: var(--smoke);
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+}
+
+.trainer-card__bio {
+  margin-top: 28px;
+}
+
+.trainer-card__bio p {
+  margin: 0;
+  line-height: 2;
+}
+
+.trainer-card__bio p + p {
+  margin-top: 12px;
+}
+
+.trainer-card__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.trainer-card__details h4 {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.trainer-card__details ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.trainer-card__details li {
+  line-height: 1.8;
+}
+
 .program {
   background:
     linear-gradient(rgba(22, 32, 34, 0.86), rgba(22, 32, 34, 0.92)),
-    url("./assets/images/cta_bg.webp") center / cover;
+    url("./assets/images/interior_gym_night_01.jpg") center / cover;
   color: var(--white);
 }
 
@@ -879,7 +989,7 @@ details p {
 .cta {
   background:
     linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.62)),
-    url("./assets/images/cta_bg.webp") center / cover;
+    url("./assets/images/interior_logo_wall_02.jpg") center / cover;
   color: var(--white);
 }
 
@@ -1073,7 +1183,9 @@ details p {
   .concept__inner,
   .change__inner,
   .feature-item,
-  .feature-item--reverse {
+  .feature-item--reverse,
+  .trainer-card,
+  .trainer-card__details {
     grid-template-columns: 1fr;
     gap: 36px;
   }
@@ -1103,6 +1215,10 @@ details p {
   .step {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .trainer-card__image {
+    min-height: 360px;
   }
 
   .private__gallery {
@@ -1162,9 +1278,18 @@ details p {
   }
 
   .problem-card,
-  .pillar {
+  .pillar,
+  .trainer-card {
     min-height: auto;
     padding: 28px 22px;
+  }
+
+  .trainer-card h3 {
+    font-size: 34px;
+  }
+
+  .trainer-card__details {
+    gap: 20px;
   }
 
   .feature__heading {
