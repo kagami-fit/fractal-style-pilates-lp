@@ -31,8 +31,7 @@ window.addEventListener("scroll", () => {
 const updateCampaignDeadline = () => {
   const now = new Date();
   const monthIndex = now.getMonth();
-  const lastDay = new Date(now.getFullYear(), monthIndex + 1, 0).getDate();
-  const label = `${monthIndex + 1}月${lastDay}日まで`;
+  const label = `${monthIndex + 1}月末まで`;
 
   document.querySelectorAll("[data-campaign-deadline]").forEach((el) => {
     el.textContent = label;
