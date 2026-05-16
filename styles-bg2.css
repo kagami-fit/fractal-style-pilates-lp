@@ -27,6 +27,7 @@ body {
   background: var(--white);
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -220,6 +221,10 @@ a {
   font-weight: 700;
   line-height: 1;
   box-shadow: 0 12px 26px rgba(10, 18, 20, 0.18);
+}
+
+.fv-mobile {
+  display: none;
 }
 
 .fv__campaign {
@@ -1312,6 +1317,24 @@ details p {
 
   .fv {
     padding-top: 66px;
+    background: #f8f7f4;
+  }
+
+  .fv__media,
+  .fv__deadline-pill {
+    display: none;
+  }
+
+  .fv-mobile {
+    display: block;
+    background: #f8f7f4;
+  }
+
+  .fv-mobile__image {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    box-shadow: 0 16px 42px rgba(30, 40, 42, 0.12);
   }
 
   .fv__media img {
