@@ -164,7 +164,7 @@ a {
 
 .header__logo span {
   font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.16em;
   line-height: 1.25;
@@ -1279,7 +1279,7 @@ details p {
   }
 
   .header__logo span {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .header__toggle {
@@ -1335,6 +1335,12 @@ details p {
     max-width: 540px;
     margin: 0 auto;
     box-shadow: 0 16px 42px rgba(30, 40, 42, 0.12);
+  }
+
+  .problem {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.64) 48%, rgba(255, 255, 255, 0.88)),
+      url("./assets/images/interior_gym_day_02.jpg") 52% 100% / auto 148% no-repeat;
   }
 
   .fv__media img {
@@ -1558,41 +1564,90 @@ details p {
     font-size: 14px;
   }
 
+  .offer.section {
+    padding: 54px 0 58px;
+  }
+
   .offer__inner > .section-label::before,
   .offer__inner > .section-label::after {
     width: 44px;
   }
 
   .offer__inner h2 {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .trial-panel {
-    margin: 30px auto 24px;
+    margin: 22px auto 18px;
   }
 
   .trial-panel__main,
   .trial-panel__campaign {
-    padding: 28px 22px;
+    padding: 20px 18px;
+  }
+
+  .trial-panel__label {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .trial-panel__title {
+    font-size: 23px;
   }
 
   .trial-panel__price {
-    font-size: clamp(46px, 14vw, 62px);
+    margin-top: 8px;
+    font-size: clamp(40px, 12vw, 50px);
+  }
+
+  .trial-panel__badges {
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .trial-panel__badges span {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .trial-panel__campaign h3 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .trial-panel__campaign h3 span {
+    margin-bottom: 2px;
+    font-size: 31px;
+  }
+
+  .trial-panel__campaign dl {
+    margin-top: 14px;
   }
 
   .trial-panel__campaign dl div {
-    display: grid;
-    gap: 4px;
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .trial-panel__campaign dt {
+    font-size: 12px;
   }
 
   .trial-panel__campaign dd,
   .trial-panel__campaign dl div:last-child dd {
-    font-size: 34px;
+    font-size: 24px;
+  }
+
+  .offer__inner p:not(.section-label):not(.trial-panel__label):not(.trial-panel__title):not(.trial-panel__price) {
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .offer__inner .button {
-    min-height: 64px;
-    font-size: 18px;
+    min-height: 56px;
+    padding: 12px 44px 12px 20px;
+    font-size: 16px;
   }
 
   .private__gallery {
