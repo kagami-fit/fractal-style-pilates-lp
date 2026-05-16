@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Sans:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-	    <link rel="stylesheet" href="./styles-bg2.css?v=20260516-trainers1" />
+	    <link rel="stylesheet" href="./styles-bg2.css?v=20260516-polish1" />
   </head>
   <body>
     <header class="header" data-header>
@@ -117,7 +117,6 @@
 
       <section class="feature" id="feature">
         <div class="feature__heading reveal">
-          <span>FEATURE</span>
           <h2>選ばれる3つの理由</h2>
         </div>
         <div class="inner feature__list">
@@ -258,17 +257,35 @@
         <div class="inner offer__inner reveal">
           <p class="section-label">FIRST TRIAL</p>
           <h2>初回体験・キャンペーン</h2>
-          <div class="offer__price">初回体験 60分 4,000円</div>
-          <div class="fv__badges offer__badges" aria-label="初回体験の特徴">
-            <span>完全個室</span>
-            <span>完全予約制</span>
-            <span>初心者歓迎</span>
-            <span>1日3枠限定</span>
-          </div>
-          <div class="campaign__price">
-            <span><span data-campaign-deadline>5月31日まで</span>の入会金無料キャンペーン</span>
-            <span>通常価格：44,000円（税込）</span>
-            <strong>キャンペーン価格：0円</strong>
+          <div class="trial-panel" aria-label="初回体験とキャンペーン">
+            <div class="trial-panel__main">
+              <p class="trial-panel__label">TRIAL</p>
+              <p class="trial-panel__title">初回体験 60分</p>
+              <p class="trial-panel__price">4,000円</p>
+              <div class="trial-panel__badges" aria-label="初回体験の特徴">
+                <span>完全個室</span>
+                <span>完全予約制</span>
+                <span>初心者歓迎</span>
+                <span>1日3枠限定</span>
+              </div>
+            </div>
+            <div class="trial-panel__campaign">
+              <p class="trial-panel__label">CAMPAIGN</p>
+              <h3>
+                <span data-campaign-deadline>5月31日まで</span><br />
+                当日入会で入会金無料
+              </h3>
+              <dl>
+                <div>
+                  <dt>通常価格</dt>
+                  <dd>44,000円（税込）</dd>
+                </div>
+                <div>
+                  <dt>キャンペーン</dt>
+                  <dd>0円</dd>
+                </div>
+              </dl>
+            </div>
           </div>
           <p class="offer__note">体験後に継続をご希望の場合も、初期費用を抑えて始めやすいキャンペーンです。</p>
           <p>まずは初回体験で、姿勢・体幹・身体の使い方をご確認ください。</p>
@@ -333,7 +350,7 @@
         </div>
       </section>
 
-      <section class="cta">
+      <section class="cta" id="reserve">
         <div class="cta__overlay">
           <div class="inner cta__inner reveal">
             <p class="section-label">RESERVE</p>
@@ -371,6 +388,6 @@
         <small>©2026 FRACTAL STYLE LP mockup.</small>
       </div>
     </footer>
-    <script src="./script.js?v=20260516-trainers1"></script>
+    <script src="./script.js?v=20260516-polish1"></script>
   </body>
 </html>

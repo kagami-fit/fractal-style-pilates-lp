@@ -513,15 +513,8 @@ a {
   text-align: center;
 }
 
-.feature__heading span {
-  color: #ddc989;
-  font-family: "EB Garamond", serif;
-  font-size: 18px;
-  letter-spacing: 0.18em;
-}
-
 .feature__heading h2 {
-  margin: 22px 0 0;
+  margin: 0;
   font-family: "Shippori Mincho", serif;
   font-size: clamp(34px, 4.4vw, 58px);
   font-weight: 500;
@@ -794,18 +787,17 @@ a {
 }
 
 .offer {
-  background: var(--white);
+  background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
 }
 
 .offer__inner {
   display: grid;
   justify-items: center;
-  max-width: 860px;
+  max-width: 980px;
   text-align: center;
 }
 
-.offer__inner h2,
-.campaign__inner h2 {
+.offer__inner h2 {
   margin: 0;
   font-family: "Shippori Mincho", serif;
   font-size: clamp(36px, 4.4vw, 60px);
@@ -813,79 +805,153 @@ a {
   line-height: 1.42;
 }
 
-.offer__price {
-  margin: 28px 0 18px;
-  color: var(--smoke-dark);
-  font-size: clamp(30px, 4vw, 54px);
+.trial-panel {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  width: min(100%, 920px);
+  margin: 40px auto 30px;
+  overflow: hidden;
+  border: 1px solid rgba(49, 65, 69, 0.16);
+  background: var(--white);
+  box-shadow: 0 28px 72px rgba(30, 40, 42, 0.14);
+  text-align: left;
+}
+
+.trial-panel__main,
+.trial-panel__campaign {
+  min-height: 330px;
+  padding: 42px 44px;
+}
+
+.trial-panel__main {
+  display: grid;
+  align-content: center;
+  background:
+    linear-gradient(135deg, rgba(49, 65, 69, 0.96), rgba(89, 105, 107, 0.94)),
+    linear-gradient(45deg, rgba(221, 201, 137, 0.14), rgba(255, 255, 255, 0));
+  color: var(--white);
+}
+
+.trial-panel__label {
+  margin: 0 0 18px;
+  color: #ddc989;
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.trial-panel__title {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.trial-panel__price {
+  margin: 10px 0 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(48px, 7vw, 86px);
   font-weight: 900;
-  line-height: 1.35;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
-.offer__badges {
-  justify-content: center;
-  margin: 0 0 30px;
+.trial-panel__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 30px;
 }
 
-.offer__inner p:not(.section-label) {
+.trial-panel__badges span {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.trial-panel__campaign {
+  position: relative;
+  display: grid;
+  align-content: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 248, 247, 0.98)),
+    radial-gradient(circle at 100% 0%, rgba(221, 201, 137, 0.18), transparent 42%);
+}
+
+.trial-panel__campaign::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: linear-gradient(90deg, var(--gold), #ddc989, var(--smoke));
+  content: "";
+}
+
+.trial-panel__campaign h3 {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(27px, 3.1vw, 42px);
+  font-weight: 500;
+  line-height: 1.48;
+  text-wrap: balance;
+}
+
+.trial-panel__campaign h3 span {
+  color: var(--gold);
+}
+
+.trial-panel__campaign dl {
+  display: grid;
+  gap: 0;
+  margin: 28px 0 0;
+}
+
+.trial-panel__campaign dl div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+}
+
+.trial-panel__campaign dl div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.trial-panel__campaign dt {
+  color: var(--smoke);
+  font-weight: 700;
+}
+
+.trial-panel__campaign dd {
+  margin: 0;
+  color: var(--smoke-dark);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.trial-panel__campaign dl div:last-child dd {
+  color: var(--gold);
+  font-size: clamp(38px, 4.6vw, 60px);
+  line-height: 1;
+}
+
+.offer__inner p:not(.section-label):not(.trial-panel__label):not(.trial-panel__title):not(.trial-panel__price) {
   max-width: 42em;
   margin: 0 auto;
   line-height: 2;
 }
 
-.offer__inner p + p {
-  margin-top: 10px;
-}
-
-.offer__inner .campaign__price {
-  width: min(100%, 680px);
-  margin-top: 8px;
+.offer__note + p {
+  margin-top: 10px !important;
 }
 
 .offer__inner .button {
-  margin-top: 28px;
-}
-
-.campaign {
-  background: var(--gray-50);
-}
-
-.campaign__inner {
-  max-width: 860px;
-  text-align: center;
-}
-
-.campaign__price {
-  display: grid;
-  gap: 10px;
-  margin: 30px auto;
-  padding: 28px;
-  border: 1px solid var(--line);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.campaign__price span {
-  font-size: 20px;
-}
-
-.campaign__price strong {
-  color: var(--gold);
-  font-size: clamp(34px, 5vw, 64px);
-  font-weight: 900;
-}
-
-.campaign__inner p {
-  max-width: 42em;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 2;
-}
-
-.campaign__inner p + p {
-  margin-top: 10px;
-}
-
-.campaign__inner .button {
   margin-top: 28px;
 }
 
@@ -987,49 +1053,79 @@ details p {
 }
 
 .cta {
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.62)),
-    url("./assets/images/interior_logo_wall_02.jpg") center / cover;
+    radial-gradient(circle at 16% 10%, rgba(221, 201, 137, 0.18), transparent 30%),
+    linear-gradient(135deg, #223335 0%, #405356 54%, #26383b 100%);
   color: var(--white);
 }
 
+.cta::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 88px 88px;
+  content: "";
+  opacity: 0.22;
+  pointer-events: none;
+}
+
 .cta__overlay {
-  padding: 128px 0;
+  position: relative;
+  padding: 118px 0 124px;
 }
 
 .cta__inner {
-  max-width: 760px;
+  max-width: 840px;
   text-align: center;
+}
+
+.cta .section-label {
+  color: #ddc989;
+}
+
+.cta h2 {
+  color: var(--white);
+  text-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
 }
 
 .cta__inner p:not(.section-label):not(.cta__tel) {
   margin: 26px auto 0;
   max-width: 650px;
+  color: rgba(255, 255, 255, 0.92);
   line-height: 2;
 }
 
 .cta__limit {
   display: inline-flex;
   margin: 34px auto 22px;
-  padding: 12px 34px;
-  border: 1px solid rgba(255, 255, 255, 0.52);
-  color: #ddc989;
+  padding: 14px 36px;
+  border: 1px solid rgba(221, 201, 137, 0.72);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--smoke-dark);
   font-size: 28px;
   font-weight: 900;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }
 
 .cta__badges {
   justify-content: center;
-  margin: 24px auto 28px;
+  margin: 24px auto 30px;
 }
 
 .cta__badges span {
-  border-color: rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(221, 201, 137, 0.56);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--smoke-dark);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
 
 .cta__tel {
   margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 14px;
 }
 
@@ -1217,6 +1313,17 @@ details p {
     gap: 10px;
   }
 
+  .trial-panel {
+    grid-template-columns: 1fr;
+    width: min(100%, 620px);
+  }
+
+  .trial-panel__main,
+  .trial-panel__campaign {
+    min-height: auto;
+    padding: 34px 30px;
+  }
+
   .trainer-card__image {
     min-height: 360px;
   }
@@ -1310,6 +1417,29 @@ details p {
     font-size: 20px;
   }
 
+  .trial-panel {
+    margin: 30px auto 24px;
+  }
+
+  .trial-panel__main,
+  .trial-panel__campaign {
+    padding: 28px 22px;
+  }
+
+  .trial-panel__price {
+    font-size: clamp(46px, 14vw, 62px);
+  }
+
+  .trial-panel__campaign dl div {
+    display: grid;
+    gap: 4px;
+  }
+
+  .trial-panel__campaign dd,
+  .trial-panel__campaign dl div:last-child dd {
+    font-size: 34px;
+  }
+
   .private__gallery {
     grid-template-columns: 1fr;
   }
@@ -1321,5 +1451,21 @@ details p {
 
   .cta__overlay {
     padding: 86px 0;
+  }
+
+  .cta__limit {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 16px;
+    font-size: 22px;
+  }
+
+  .cta__badges {
+    gap: 8px;
+  }
+
+  .cta__badges span {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }
