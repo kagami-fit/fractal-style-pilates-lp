@@ -716,6 +716,25 @@ a {
   margin: 0 0 30px;
 }
 
+.offer__inner p:not(.section-label) {
+  max-width: 42em;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.offer__inner p + p {
+  margin-top: 10px;
+}
+
+.offer__inner .campaign__price {
+  width: min(100%, 680px);
+  margin-top: 8px;
+}
+
+.offer__inner .button {
+  margin-top: 28px;
+}
+
 .campaign {
   background: var(--gray-50);
 }
