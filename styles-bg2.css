@@ -209,15 +209,15 @@ a {
 .fv__deadline-pill {
   position: absolute;
   right: 7.4%;
-  top: calc(74.2% + 20px);
+  top: calc(74.2% + 12px);
   bottom: auto;
   z-index: 4;
-  padding: 10px 24px;
+  padding: clamp(12px, 0.9vw, 16px) clamp(30px, 2.35vw, 44px);
   border: 1px solid rgba(221, 201, 137, 0.82);
   background: linear-gradient(180deg, rgba(174, 154, 108, 0.97), rgba(139, 121, 86, 0.98));
   color: var(--white);
   font-family: "Shippori Mincho", serif;
-  font-size: clamp(16px, 1.35vw, 22px);
+  font-size: clamp(28px, 2.15vw, 36px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.04em;
