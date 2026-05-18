@@ -1041,6 +1041,7 @@ a {
   position: relative;
   display: inline-block;
   padding: 0 6px;
+  color: rgba(12, 14, 15, 0.48);
 }
 
 .trial-panel__normal-price span::after {
@@ -1049,9 +1050,9 @@ a {
   left: -8px;
   right: -8px;
   height: 3px;
-  background: linear-gradient(90deg, rgba(154, 136, 102, 0.15), var(--gold), rgba(154, 136, 102, 0.15));
+  background: rgba(154, 136, 102, 0.5);
   content: "";
-  transform: rotate(-9deg);
+  transform: rotate(-7deg);
   transform-origin: center;
 }
 
@@ -1060,6 +1061,8 @@ a {
   align-items: center;
   justify-content: flex-end;
   gap: 14px;
+  padding: 2px 14px 6px;
+  background: linear-gradient(180deg, rgba(221, 201, 137, 0.13), rgba(154, 136, 102, 0.08));
 }
 
 .trial-panel__free-price span {
