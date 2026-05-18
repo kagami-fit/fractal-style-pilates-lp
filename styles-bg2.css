@@ -1020,6 +1020,7 @@ a {
 }
 
 .trial-panel__campaign dl div:last-child {
+  align-items: center;
   border-bottom: 1px solid rgba(154, 136, 102, 0.42);
 }
 
@@ -1036,10 +1037,49 @@ a {
   font-weight: 600;
 }
 
-.trial-panel__campaign dl div:last-child dd {
+.trial-panel__normal-price span {
+  position: relative;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+.trial-panel__normal-price span::after {
+  position: absolute;
+  top: 52%;
+  left: -8px;
+  right: -8px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(154, 136, 102, 0.15), var(--gold), rgba(154, 136, 102, 0.15));
+  content: "";
+  transform: rotate(-9deg);
+  transform-origin: center;
+}
+
+.trial-panel__free-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.trial-panel__free-price span {
   color: var(--gold);
   font-size: clamp(58px, 6vw, 88px);
   font-weight: 500;
+  line-height: 1;
+}
+
+.trial-panel__free-price em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 13px;
+  border: 1px solid rgba(154, 136, 102, 0.56);
+  color: var(--gold);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
   line-height: 1;
 }
 
@@ -1190,7 +1230,7 @@ details p {
 }
 
 .cta__inner {
-  max-width: 840px;
+  max-width: 960px;
   text-align: center;
 }
 
@@ -1200,6 +1240,8 @@ details p {
 
 .cta h2 {
   color: var(--white);
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.55;
   text-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
 }
 
@@ -1681,6 +1723,25 @@ details p {
   .trial-panel__campaign dd,
   .trial-panel__campaign dl div:last-child dd {
     font-size: 24px;
+  }
+
+  .trial-panel__normal-price span::after {
+    left: -5px;
+    right: -5px;
+    height: 2px;
+  }
+
+  .trial-panel__free-price {
+    gap: 8px;
+  }
+
+  .trial-panel__free-price span {
+    font-size: 42px;
+  }
+
+  .trial-panel__free-price em {
+    padding: 6px 9px;
+    font-size: 11px;
   }
 
   .offer__inner p:not(.section-label):not(.trial-panel__label):not(.trial-panel__title):not(.trial-panel__price) {
