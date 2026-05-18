@@ -209,7 +209,7 @@ a {
 .fv__deadline-pill {
   position: absolute;
   right: 7.4%;
-  top: calc(74.2% + 12px);
+  top: calc(74.2% + 44px);
   bottom: auto;
   z-index: 4;
   padding: clamp(12px, 0.9vw, 16px) clamp(30px, 2.35vw, 44px);
