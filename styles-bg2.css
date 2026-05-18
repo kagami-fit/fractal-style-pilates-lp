@@ -1210,8 +1210,8 @@ details p {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 16% 10%, rgba(221, 201, 137, 0.18), transparent 30%),
-    linear-gradient(135deg, #223335 0%, #405356 54%, #26383b 100%);
+    radial-gradient(circle at 16% 10%, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(135deg, #59696b 0%, #617174 52%, #536366 100%);
   color: var(--white);
 }
 
@@ -1293,8 +1293,9 @@ details p {
 
 .footer {
   padding: 52px 0;
-  background: var(--smoke-dark);
-  color: var(--white);
+  border-top: 1px solid rgba(7, 7, 7, 0.08);
+  background: var(--white);
+  color: var(--smoke-dark);
 }
 
 .footer__inner {
@@ -1310,11 +1311,13 @@ details p {
 
 .footer p {
   margin: 0;
+  color: var(--smoke-dark);
+  font-weight: 700;
   line-height: 1.9;
 }
 
 .footer small {
-  opacity: 0.7;
+  color: rgba(49, 65, 69, 0.62);
 }
 
 .reveal {
