@@ -208,18 +208,21 @@ a {
 
 .fv__deadline-pill {
   position: absolute;
-  right: clamp(62px, 5vw, 96px);
-  bottom: clamp(132px, 10vw, 176px);
+  right: 7.4%;
+  top: calc(74.2% + 20px);
+  bottom: auto;
   z-index: 4;
-  padding: 8px 18px;
+  padding: 10px 24px;
   border: 1px solid rgba(221, 201, 137, 0.82);
-  background: rgba(154, 136, 102, 0.94);
+  background: linear-gradient(180deg, rgba(174, 154, 108, 0.97), rgba(139, 121, 86, 0.98));
   color: var(--white);
   font-family: "Shippori Mincho", serif;
-  font-size: clamp(14px, 1.25vw, 20px);
+  font-size: clamp(16px, 1.35vw, 22px);
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 12px 26px rgba(10, 18, 20, 0.18);
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 30px rgba(10, 18, 20, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .fv-mobile {
